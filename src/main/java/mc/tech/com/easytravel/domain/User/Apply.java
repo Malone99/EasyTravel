@@ -77,24 +77,29 @@ public class Apply {
 
         private String Located;
 
-        public void setApplyNum(int applyNum) {
+        public Builder setApplyNum(int applyNum) {
             ApplyNum = applyNum;
+            return this;
         }
 
-        public void setSubject(String subject) {
+        public Builder setSubject(String subject) {
             Subject = subject;
+            return this;
         }
 
-        public void setStart(String start) {
+        public Builder setStart(String start) {
             Start = start;
+            return this;
         }
 
-        public void setEnd(String end) {
+        public Builder setEnd(String end) {
             End = end;
+            return this;
         }
 
-        public void setLocated(String located) {
+        public Builder setLocated(String located) {
             Located = located;
+            return this;
         }
 
         public Apply build(){

@@ -27,6 +27,10 @@ public class userAccount {
     @NotNull
     private String status;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "UserID")
+    private  USER user;
+
     public userAccount() {
 
     }
@@ -62,9 +66,6 @@ public class userAccount {
         return user;
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "UserID")
-    private  USER user;
 
     public userAccount(Builder builder) {
         this.name=builder.name;
@@ -93,6 +94,8 @@ public class userAccount {
 
         private String code;
 
+        private  USER user;
+
         public Builder setCode(String code) {
             this.code = code;
             return this;
@@ -105,19 +108,12 @@ public class userAccount {
 
         private String status;
 
-        public Builder setContact(Contact contact) {
-            this.contact = contact;
-            return this;
-        }
-
-        private  Contact contact;
-
         public Builder setUser(USER user) {
             this.user = user;
             return this;
         }
 
-        private  USER user;
+
 
         public Builder setUserNumber(int userNumber) {
             UserNumber = userNumber;
@@ -137,9 +133,6 @@ public class userAccount {
         public Builder setPassword(String password) {
             this.password = password;
             return this;
-        }
-        public void setUserr(USER user) {
-            this.user = user;
         }
         public Builder setConfirm_password(String confirm_password) {
             this.confirm_password = confirm_password;

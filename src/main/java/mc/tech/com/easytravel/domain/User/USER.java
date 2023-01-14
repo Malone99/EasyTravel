@@ -89,6 +89,7 @@ public class USER {
         return sexualOrientation;
     }
     public  static class Builder{
+
         private String idOrPassport;
 
         private String first_Given_Name;
@@ -117,6 +118,11 @@ public class USER {
             this.first_Given_Name = first_Given_Name;
             return this;
         }
+        public Builder setIdOrPassport(String idOrPassport) {
+            this.idOrPassport = idOrPassport;
+            return this;
+        }
+
 
         public Builder setMiddleName(String middleName) {
             this.middleName = middleName;

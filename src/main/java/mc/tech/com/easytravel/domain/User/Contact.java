@@ -23,6 +23,8 @@ public class Contact {
 
     private String   postalCode;
 
+    private String telephoneNumber;
+
     Contact(Builder builder) {
         this.contactID=builder.contactID;
         this.email=builder.country;
@@ -30,6 +32,7 @@ public class Contact {
         this.addressLine1=builder.addressLine1;
         this.postalCode=builder.postalCode;
         this.country=builder.country;
+        this.telephoneNumber=builder.telephoneNumber;
     }
 
     public Contact() {
@@ -64,7 +67,6 @@ public class Contact {
         return telephoneNumber;
     }
 
-    private String telephoneNumber;
 
     @Override
     public String toString() {
@@ -93,6 +95,8 @@ public class Contact {
         private String addressLine1;
 
         private String   postalCode;
+
+        private String telephoneNumber;
 
 
         public Builder setContactID(int contactID) {
@@ -124,10 +128,16 @@ public class Contact {
             this.postalCode = postalCode;
             return this;
         }
+        public Builder setTelephoneNumber(String telephoneNumber) {
+            this.telephoneNumber = telephoneNumber;
+            return this;
+        }
 
         public Contact build(){
             return new Contact(this);
         }
+
+
     }
 
 
