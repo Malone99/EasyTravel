@@ -1,4 +1,4 @@
-package com.mc.tech.kim_chris_highschool.controller;
+package mc.tech.com.easytravel.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,12 +11,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @Controller
 @RequiredArgsConstructor
-public class login {
+public class logincontroller {
     @GetMapping({"/login"})
     public ModelAndView homepage()
     {
         ModelAndView modelAndView = new ModelAndView("login");
-        modelAndView.addObject("message", "Baeldung");
+        modelAndView.addObject("passing logging form", "login");
         return modelAndView;
     }
 }
