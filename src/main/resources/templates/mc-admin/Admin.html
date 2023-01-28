@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title> admin Dashboard</title>
+    <link th:href="@{/styles/admin.css}" rel="stylesheet" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="#"   class="items">
+                <img th:src = "@{/im/happy-student-with-graduation-hat-diploma-grey.jpg}" />
+                <span class="nav-item">Admin</span>
+            </a></li>
+            <li><a href="# active" class="items">
+                <i class="fas fa-menorah"></i>
+                <span class="nav-item " >Dashboard</span>
+            </a></li>
+            <li><a href="#" class="items">
+                <i class="fas fa-users"></i>
+                <span class="nav-item">User</span>
+            </a></li>
+            <li><a href="#" class="items">
+                <i class="fas fa-database"></i>
+                <span class="nav-item">Report</span>
+            </a></li>
+            <li><a href="#" class="items">
+                <i class="fas fa-chart-bar"></i>
+                <span class="nav-item">Status</span>
+            </a></li>
+            <li><a href="#" class="items">
+                <i class="fas fa-cog"></i>
+                <span class="nav-item">Setting</span>
+            </a></li>
+
+            <li><a href="#" class="items" id="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+            </a></li>
+        </ul>
+    </nav>
+
+
+    <section class="main">
+        <div class="main-top">
+            <h1>users</h1>
+            <i class="fas fa-user-cog"></i>
+        </div>
+        <div class="users">
+            <div class="card">
+                <img th:src="@{/im/happy-student-with-graduation-hat-diploma-grey.jpg}"/>
+                <h4>users</h4>
+                <p> </p>
+                <div class="per">
+                    <table>
+                        <tr>
+                            <td ><span class="act">85%</span></td>
+                            <td><span class="ina">200</span></td>
+                        </tr>
+                        <tr>
+                            <td>Active</td>
+                            <td>user</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./pic/img2.jpg">
+                <h4>user-applied</h4>
+                <p></p>
+                <div class="per">
+                    <table>
+                        <tr>
+                            <td><span class="act">57%</span></td>
+                            <td><span class="ina">23%</span></td>
+                        </tr>
+                        <tr>
+                            <td>completed</td>
+                            <td>incomplete</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./pic/img3.jpg">
+                <h4>Courses</h4>
+                <p></p>
+                <div class="per">
+                    <table>
+                        <tr>
+                            <td ><span class="act">77</span></td>
+                            <td><span class="ina">33</span></td>
+                        </tr>
+                        <tr>
+                            <td >Active</td>
+                            <td >inactive</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./pic/img4.jpg">
+                <h4>university</h4>
+                <p></p>
+                <div class="per">
+                    <table>
+                        <tr>
+                            <td><span class="act">85%</span></td>
+                            <td><span class="ina">25%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Active</td>
+                            <td>inactive</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <section class="attendance">
+            <div class="attendance-list">
+              <div  class="detail-btn" ><h1>List Of Users</h1>
+              </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Date-login</th>
+                        <th>Status</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Sam David</td>
+                        <td>draybulambo45@gmail.com</td>
+                        <td>03-24-22</td>
+                        <td>Active</td>
+                        <td><button class="edit">View</button></td>
+                        <td><button class="delete">delete</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+</div>
+
+</body>
+</html>

@@ -17,4 +17,11 @@ public class registerController {
         modelAndView.addObject("passing register form", "login");
         return modelAndView;
     }
+    @GetMapping({"/homepage"})
+    public ModelAndView homepage()
+    {
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("passing register form", "login");
+        return modelAndView;
+    }
 }
