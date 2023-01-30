@@ -13,7 +13,7 @@ public class registerController {
     @GetMapping({"/register"})
     public ModelAndView register()
     {
-        ModelAndView modelAndView = new ModelAndView("register");
+        ModelAndView modelAndView = new ModelAndView("mc-admin/register");
         modelAndView.addObject("passing register form", "login");
         return modelAndView;
     }

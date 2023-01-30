@@ -15,7 +15,7 @@ public class logincontroller {
     @GetMapping({"/login"})
     public ModelAndView homepage()
     {
-        ModelAndView modelAndView = new ModelAndView("login");
+        ModelAndView modelAndView = new ModelAndView("mc-admin/login");
         modelAndView.addObject("passing logging form", "login");
         return modelAndView;
     }
