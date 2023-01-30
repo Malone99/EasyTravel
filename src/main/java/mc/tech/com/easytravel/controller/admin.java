@@ -32,7 +32,7 @@ public class admin {
 //        modelAndView.addObject("StudentAll" ,list1);
         return modelAndView;
     }
-    @GetMapping({"/admin-user-status"})
+    @GetMapping({"/admin-profile"})
     public ModelAndView Dashboard_Admin_listOfUsers_status()
     {
         ModelAndView modelAndView = new ModelAndView("mc-admin/admin-status");
