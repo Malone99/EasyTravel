@@ -2,16 +2,13 @@ package mc.tech.com.easytravel.domain.User;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import java.util.Set;
-
 import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity
-
 public class USER {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int  ID;
     private String idOrPassport;
 
     private String first_Given_Name;
